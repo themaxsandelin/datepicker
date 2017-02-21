@@ -1,0 +1,25 @@
+{
+  "name": "datepicker",
+  "version": "1.0.0",
+  "description": "A datepicker built in JavaScript by Max",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/themaxsandelin/datepicker.git"
+  },
+  "keywords": [],
+  "author": "Max Sandelin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/themaxsandelin/datepicker/issues"
+  },
+  "homepage": "https://github.com/themaxsandelin/datepicker#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-sass": "^3.1.0"
+  }
+}
