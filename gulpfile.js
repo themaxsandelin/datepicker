@@ -4,7 +4,9 @@ var babel = require('gulp-babel');
 
 gulp.task('javascript', function () {
   return gulp.src('./src/datepicker.js')
-    .pipe(babel())
+    .pipe(babel({
+      presets: ['es2015']
+    }))
     .pipe(gulp.dest('./dist/js'));
 });
 
