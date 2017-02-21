@@ -26,5 +26,5 @@ Temporary Items
 .apdisk
 
 # Datepicker
-/dist/
+/dist/*.html
 /node_modules/

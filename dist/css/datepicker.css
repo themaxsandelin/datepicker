@@ -1,0 +1,88 @@
+.datepicker {
+  width: 290px;
+  position: absolute;
+  background: #fff;
+  border-radius: 6px;
+  color: #708D66;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 15px 0 25px;
+  user-select: none;
+  z-index: 99;
+  transform: translate3d(0px, 10px, 0px);
+  display: none;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease; }
+  .datepicker.show {
+    transform: translate3d(0px, 0px, 0px);
+    opacity: 1; }
+  .datepicker .header {
+    width: 100%;
+    height: 16px;
+    padding: 0 25px; }
+    .datepicker .header h4 {
+      float: left;
+      font-weight: 400;
+      line-height: 16px;
+      text-transform: capitalize; }
+    .datepicker .header .controls {
+      width: 45px;
+      height: 16px;
+      float: right;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      .datepicker .header .controls .switch {
+        width: 16px;
+        height: 16px;
+        border-radius: 100%;
+        background-color: #D7E0CE;
+        cursor: pointer; }
+        .datepicker .header .controls .switch.prev {
+          background-image: url(../images/date-arrow-left.svg);
+          background-repeat: no-repeat;
+          background-size: 5px;
+          background-position: 5px center; }
+        .datepicker .header .controls .switch.next {
+          background-image: url(../images/date-arrow-right.svg);
+          background-repeat: no-repeat;
+          background-size: 5px;
+          background-position: 6px center; }
+  .datepicker .dates {
+    width: 100%;
+    padding: 0 25px; }
+  .datepicker ul.row {
+    width: 100%;
+    height: 20px;
+    margin: 0 0 8px 0;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .datepicker ul.row:last-of-type {
+      margin: 0; }
+    .datepicker ul.row.weekdays {
+      margin: 20px 0 15px; }
+    .datepicker ul.row .bar {
+      height: 20px;
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      background: rgba(112, 141, 102, 0.25);
+      border-radius: 10px; }
+    .datepicker ul.row li {
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      float: left;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      border-radius: 100%; }
+  .datepicker .weeks ul.row li {
+    cursor: pointer; }
+    .datepicker .weeks ul.row li.other {
+      color: #E1E4E7; }
+    .datepicker .weeks ul.row li.selected {
+      color: #fff;
+      background: #708D66; }
