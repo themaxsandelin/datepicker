@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var babel = require('gulp-babel');
+var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('javascript', function () {
   return gulp.src('./src/datepicker.js')
@@ -21,4 +22,4 @@ gulp.task('watcher', function () {
   gulp.watch('./src/datepicker.js', ['javascript']);
 });
 
-gulp.task('default', ['javascript', 'sass', 'watcher']);
+gulp.task('default', ['javascript', 'sass', 'watcher', 'css']);
