@@ -1,31 +1,31 @@
 {
   "name": "datepicker",
   "version": "1.0.0",
-  "description": "A datepicker built in JavaScript by Max",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "It's a datepicker.",
+  "author": {
+    "name": "Max Sandelin",
+    "email": "themaxsandelin@gmail.com",
+    "url": "https://maxsandelin.com"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/themaxsandelin/datepicker.git"
-  },
-  "keywords": [],
-  "author": "Max Sandelin",
+  "repository": "themaxsandelin/datepicker",
   "license": "MIT",
+  "keywords": [
+    "datepicker",
+    "javascript"
+  ],
+  "homepage": "https://github.com/themaxsandelin/datepicker#readme",
   "bugs": {
     "url": "https://github.com/themaxsandelin/datepicker/issues"
   },
-  "homepage": "https://github.com/themaxsandelin/datepicker#readme",
   "devDependencies": {
-    "babel-preset-es2015": "^6.22.0",
-    "babel-preset-es2016": "^6.22.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-babel": "^6.1.2",
-    "gulp-sass": "^3.1.0"
-  },
-  "dependencies": {
-    "core-js": "^2.4.1"
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-babel": "^7.0.0",
+    "gulp-css-base64": "^1.3.4",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0"
   }
 }

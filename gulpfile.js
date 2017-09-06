@@ -1,25 +1,36 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var babel = require('gulp-babel');
-var autoprefixer = require('gulp-autoprefixer');
+const gulp = require('gulp');
 
-gulp.task('javascript', function () {
-  return gulp.src('./src/datepicker.js')
+const base64 = require('gulp-css-base64');
+const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
+
+const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
+
+gulp.task('js', () => {
+  return gulp.src('./src/**/*.js')
     .pipe(babel({
-      presets: ['es2015']
+      presets: ['env']
     }))
+    .pipe(uglify())
     .pipe(gulp.dest('./dist/js'));
 });
 
-gulp.task('sass', function () {
-  return gulp.src('./src/datepicker.scss')
+gulp.task('scss', () => {
+  return gulp.src('./src/**/*.scss')
+    .pipe(base64())
+    .pipe(autoprefixer({
+      browsers: ['last 4 versions'],
+      cascade: false
+    }))
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./dist/css'));
 });
 
-gulp.task('watcher', function () {
-  gulp.watch('./src/datepicker.scss', ['sass']);
-  gulp.watch('./src/datepicker.js', ['javascript']);
+gulp.task('watch', () => {
+  gulp.watch('./src/**/*.scss', ['scss']);
+  gulp.watch('./src/**/*.js', ['js']);
 });
 
-gulp.task('default', ['javascript', 'sass', 'watcher', 'css']);
+gulp.task('build', ['js', 'scss']);
+gulp.task('default', ['js', 'scss', 'watch']);
